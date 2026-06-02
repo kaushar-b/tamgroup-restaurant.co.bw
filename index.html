@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,50 +54,37 @@
     .page {
       position: relative;
       z-index: 1;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 80px 24px 60px;
+      padding: 60px 24px 50px;
       text-align: center;
+      gap: 0;
+      overflow: hidden;
     }
 
     /* ── logo block ── */
     .logo-wrap {
-      margin-bottom: 56px;
+      margin-bottom: 28px;
       opacity: 0;
       animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.1s forwards;
     }
 
-    .logo-emblem {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 18px;
-    }
-
-    .logo-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: clamp(2rem, 5vw, 3rem);
-      letter-spacing: 0.18em;
+    .logo-placeholder {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto;
+      border: 2px dashed var(--cream);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--cream);
       text-transform: uppercase;
-      color: var(--dark);
-      line-height: 1;
-    }
-
-    .logo-name span {
-      color: var(--gold);
-    }
-
-    .logo-tagline {
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 0.7rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-top: 8px;
     }
 
     /* ── divider ── */
@@ -108,7 +92,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      margin: 0 auto 52px;
+      margin: 0 auto 28px;
       width: min(320px, 80vw);
       opacity: 0;
       animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
@@ -132,7 +116,7 @@
     .headline-block {
       opacity: 0;
       animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.45s forwards;
-      margin-bottom: 48px;
+      margin-bottom: 28px;
     }
 
     .headline {
@@ -151,11 +135,11 @@
 
     .subline {
       font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: clamp(0.8rem, 2vw, 0.95rem);
+      font-weight: 500;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--mid);
+      color: var(--dark);
       margin-top: 16px;
     }
 
@@ -205,34 +189,22 @@
       animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.75s forwards;
     }
 
-    .location-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .location-name {
+    .location-main {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 400;
+      font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+      font-weight: 600;
       color: var(--dark);
-      line-height: 1.4;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
     }
 
     .location-country {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-top: 6px;
-    }
-
-    /* ── pin icon ── */
-    .pin {
-      display: inline-block;
-      margin-bottom: 10px;
+      font-family: 'Jost', sans-serif;
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      letter-spacing: 0.3em;
+      color: #1a5fb4;
+      margin-top: 8px;
+      font-weight: 500;
     }
 
     /* ── footer ── */
@@ -271,22 +243,7 @@
 
     <!-- LOGO -->
     <div class="logo-wrap">
-      <!-- SVG Logo Emblem -->
-      <svg class="logo-emblem" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="1" y="1" width="78" height="78" rx="3" stroke="#b89a5a" stroke-width="1.2"/>
-        <rect x="7" y="7" width="66" height="66" rx="2" stroke="#b89a5a" stroke-width="0.5" opacity="0.5"/>
-        <!-- T -->
-        <text x="14" y="56" font-family="Cormorant Garamond, serif" font-size="42" font-weight="300" fill="#1a1612" letter-spacing="-2">T</text>
-        <!-- A -->
-        <text x="33" y="56" font-family="Cormorant Garamond, serif" font-size="42" font-weight="300" fill="#b89a5a" letter-spacing="-2">A</text>
-        <!-- M -->
-        <text x="52" y="56" font-family="Cormorant Garamond, serif" font-size="42" font-weight="300" fill="#1a1612" letter-spacing="-2">M</text>
-        <!-- bottom rule -->
-        <line x1="12" y1="62" x2="68" y2="62" stroke="#b89a5a" stroke-width="0.7"/>
-      </svg>
-
-      <div class="logo-name">T<span>A</span>M Group</div>
-      <div class="logo-tagline">Restaurant &amp; Hospitality</div>
+      <div class="logo-placeholder">YOUR LOGO HERE</div>
     </div>
 
     <!-- DIVIDER -->
@@ -302,34 +259,15 @@
       <div class="subline">Website Under Construction</div>
     </div>
 
-    <!-- PROGRESS -->
-    <div class="progress-wrap">
-      <div class="progress-label">
-        <span>In Progress</span>
-        <span>Coming Soon</span>
-      </div>
-      <div class="progress-track">
-        <div class="progress-fill"></div>
-      </div>
-    </div>
-
     <!-- LOCATION -->
     <div class="location-card">
-      <div class="location-label">
-        <span class="pin">
-          <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 0C2.46 0 0 2.46 0 5.5c0 4.125 5.5 8.5 5.5 8.5S11 9.625 11 5.5C11 2.46 8.54 0 5.5 0Zm0 7.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" fill="#b89a5a"/>
-          </svg>
-        </span>
-        &nbsp;Find Us Here
-      </div>
-      <div class="location-name">Mowana Park Mall<br>Phakalane</div>
-      <div class="location-country">Botswana</div>
+      <div class="location-main">MOWANA PARK MALL, PHAKALANE</div>
+      <div class="location-country">BOTSWANA</div>
     </div>
 
   </div>
 
-  <footer>© 2025 <span>TAM Group</span> — tamgroup-restaurant.co.bw</footer>
+  <footer>© 2025 tamgroup-restaurant.co.bw</footer>
 
 </body>
 </html>
