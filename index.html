@@ -122,7 +122,7 @@
     .headline {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
-      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
       line-height: 1.1;
       color: var(--dark);
       letter-spacing: 0.02em;
@@ -183,28 +183,39 @@
       background: var(--off);
       border: 1px solid var(--cream);
       border-radius: var(--radius);
-      padding: 28px 36px;
-      width: min(380px, 90vw);
+      padding: 24px 32px;
+      width: min(420px, 92vw);
+      margin-top: 20px;
       opacity: 0;
       animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.75s forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .location-icon {
+      margin-bottom: 10px;
     }
 
     .location-main {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+      font-size: clamp(1.4rem, 4.5vw, 2.1rem);
       font-weight: 600;
       color: var(--dark);
       letter-spacing: 0.08em;
-      white-space: nowrap;
+      text-align: center;
+      width: 100%;
     }
 
     .location-country {
       font-family: 'Jost', sans-serif;
-      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      font-size: clamp(1.1rem, 3.5vw, 1.6rem);
       letter-spacing: 0.3em;
       color: #1a5fb4;
       margin-top: 8px;
-      font-weight: 500;
+      font-weight: 600;
+      text-align: center;
     }
 
     /* ── footer ── */
@@ -261,6 +272,11 @@
 
     <!-- LOCATION -->
     <div class="location-card">
+      <div class="location-icon">
+        <svg width="22" height="28" viewBox="0 0 22 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 0C4.925 0 0 4.925 0 11c0 8.25 11 17 11 17s11-8.75 11-17C22 4.925 17.075 0 11 0Zm0 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" fill="#b89a5a"/>
+        </svg>
+      </div>
       <div class="location-main">MOWANA PARK MALL, PHAKALANE</div>
       <div class="location-country">BOTSWANA</div>
     </div>
