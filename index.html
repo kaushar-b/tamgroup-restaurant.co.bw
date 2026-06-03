@@ -14,10 +14,10 @@
 
     :root {
       --white:   #ffffff;
-      --off:     #fff0f3;
+      --off:     #fff9e6;
       --cream:   #FF4164;
-      --gold:    #FF4164;
-      --gold-lt: #ff6b85;
+      --gold:    #FFE14C;
+      --gold-lt: #ffea7a;
       --dark:    #1a1612;
       --mid:     #5c5248;
       --radius:  4px;
@@ -31,7 +31,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── noise texture overlay ── */
     body::before {
       content: '';
       position: fixed;
@@ -41,16 +40,14 @@
       z-index: 0;
     }
 
-    /* ── thin gold top bar ── */
     .top-bar {
       position: fixed;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold));
+      background: linear-gradient(90deg, #FFE14C, #FF4164, #FFE14C);
       z-index: 100;
     }
 
-    /* ── page layout ── */
     .page {
       position: relative;
       z-index: 1;
@@ -65,7 +62,6 @@
       overflow: hidden;
     }
 
-    /* ── logo block ── */
     .logo-wrap {
       margin-bottom: 28px;
       opacity: 0;
@@ -76,18 +72,17 @@
       width: 110px;
       height: 110px;
       margin: 0 auto;
-      border: 2px dashed var(--cream);
+      border: 2px dashed #FF4164;
       border-radius: var(--radius);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.6rem;
       letter-spacing: 0.15em;
-      color: var(--cream);
+      color: #FF4164;
       text-transform: uppercase;
     }
 
-    /* ── divider ── */
     .divider {
       display: flex;
       align-items: center;
@@ -101,18 +96,17 @@
     .divider-line {
       flex: 1;
       height: 1px;
-      background: var(--cream);
+      background: #FFE14C;
     }
 
     .divider-diamond {
       width: 6px;
       height: 6px;
-      background: var(--gold);
+      background: #D7000F;
       transform: rotate(45deg);
       flex-shrink: 0;
     }
 
-    /* ── main headline ── */
     .headline-block {
       opacity: 0;
       animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.45s forwards;
@@ -130,7 +124,7 @@
 
     .headline em {
       font-style: italic;
-      color: var(--gold);
+      color: #FF4164;
     }
 
     .subline {
@@ -143,7 +137,6 @@
       margin-top: 16px;
     }
 
-    /* ── progress bar ── */
     .progress-wrap {
       width: min(360px, 80vw);
       margin: 0 auto 52px;
@@ -163,7 +156,7 @@
 
     .progress-track {
       height: 2px;
-      background: var(--cream);
+      background: #ffe9a0;
       border-radius: 2px;
       overflow: hidden;
     }
@@ -171,16 +164,15 @@
     .progress-fill {
       height: 100%;
       width: 0;
-      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+      background: linear-gradient(90deg, #FFE14C, #FF4164);
       border-radius: 2px;
       animation: fillBar 2s cubic-bezier(0.22,1,0.36,1) 1s forwards;
     }
 
     @keyframes fillBar { to { width: 40%; } }
 
-    /* ── location card ── */
     .location-card {
-      background: #fff0f3;
+      background: #ffffff;
       border: none;
       border-radius: var(--radius);
       padding: 20px 28px;
@@ -220,7 +212,6 @@
       text-align: center;
     }
 
-    /* ── footer ── */
     footer {
       position: fixed;
       bottom: 0; left: 0; right: 0;
@@ -229,19 +220,15 @@
       font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--cream);
+      color: #aaa;
       background: transparent;
     }
 
-    footer span { color: var(--gold); }
-
-    /* ── animations ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(22px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── mobile tweaks ── */
     @media (max-width: 480px) {
       .page { padding: 60px 12px 50px; }
       .location-card { padding: 14px 16px; }
@@ -264,29 +251,25 @@
 
   <div class="page">
 
-    <!-- LOGO -->
     <div class="logo-wrap">
       <div class="logo-placeholder">YOUR LOGO HERE</div>
     </div>
 
-    <!-- DIVIDER -->
     <div class="divider">
       <div class="divider-line"></div>
       <div class="divider-diamond"></div>
       <div class="divider-line"></div>
     </div>
 
-    <!-- HEADLINE -->
     <div class="headline-block">
       <div class="headline">Something <em>exceptional</em><br>is being prepared.</div>
       <div class="subline">Website Under Construction</div>
     </div>
 
-    <!-- LOCATION -->
     <div class="location-card">
       <div class="location-row">
         <svg width="26" height="34" viewBox="0 0 22 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;margin-top:2px">
-          <path d="M11 0C4.925 0 0 4.925 0 11c0 8.25 11 17 11 17s11-8.75 11-17C22 4.925 17.075 0 11 0Zm0 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" fill="#FF4164"/>
+          <path d="M11 0C4.925 0 0 4.925 0 11c0 8.25 11 17 11 17s11-8.75 11-17C22 4.925 17.075 0 11 0Zm0 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" fill="#D7000F"/>
         </svg>
         <div class="location-main">MOWANA PARK MALL, PHAKALANE</div>
       </div>
